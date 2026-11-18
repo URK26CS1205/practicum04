@@ -1,0 +1,464 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToyNest - Registration Form</title>
+
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- INTERNAL CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fff8ed;
+            color: #26354a;
+            padding: 25px;
+        }
+
+        header {
+            background-color: #79c9c5;
+            text-align: center;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        nav {
+            background-color: #26354a;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffb84d;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .intro h2 {
+            color: #e7837d;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            line-height: 1.6;
+        }
+
+        .multimedia {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .multimedia h2 {
+            text-align: center;
+            color: #e7837d;
+            margin-bottom: 25px;
+        }
+
+        .media-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .media-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .media-card h3 {
+            margin-bottom: 12px;
+            color: #26354a;
+        }
+
+        .media-card p {
+            margin-bottom: 15px;
+        }
+
+        audio, video, iframe, embed {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        video {
+            height: 230px;
+            background-color: #eee;
+        }
+
+        iframe {
+            height: 230px;
+            border: none;
+        }
+
+        embed {
+            height: 300px;
+        }
+
+        .form-container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #e7837d;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid #79c9c5;
+            border-color: #79c9c5;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .radio-group label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: normal;
+        }
+
+        .radio-group input {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background-color: #e7837d;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #d66d67;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #555;
+        }
+
+        @media (max-width: 650px) {
+            .media-container {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 12px;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🧸 ToyNest</h1>
+        <p>Play • Build • Discover</p>
+        <p>Innovative Toys and Learning Kits for Kids</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#register">Registration</a>
+        <a href="#styling">CSS Styling</a>
+    </nav>
+
+    <!-- INTRODUCTION -->
+    <section class="intro" id="home">
+        <h2>Welcome to ToyNest!</h2>
+        <p>
+            Welcome to ToyNest, where learning meets fun!
+            Explore our exciting toys, educational videos,
+            audio activities and learning materials.
+        </p>
+    </section>
+
+    <!-- SUB-PRACTICUM 2: MULTIMEDIA SECTION -->
+    <section class="multimedia" id="multimedia">
+
+        <h2>Explore Our Multimedia</h2>
+
+        <div class="media-container">
+
+            <!-- AUDIO TAG -->
+            <div class="media-card">
+                <h3>🎵 ToyNest Audio</h3>
+                <p>Listen to our fun learning audio.</p>
+
+                <audio controls>
+                    <source src="ToyNest Audio.mp3" type="audio/mpeg">
+                    Your browser does not support audio.
+                </audio>
+            </div>
+
+            <!-- VIDEO TAG -->
+            <div class="media-card">
+                <h3>🎬 ToyNest Video</h3>
+                <p>Watch our exciting learning video.</p>
+
+                <video controls playsinline>
+                    <source src="ToyNest.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+            </div>
+
+            <!-- EMBED TAG -->
+            <div class="media-card">
+                <h3>📄 ToyNest Learning PDF</h3>
+                <p>Read our learning document.</p>
+
+                <embed
+                    src="ToyNest_Poster.pdf"
+                    type="application/pdf">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SUB-PRACTICUM 3: HTML FORM SECTION -->
+    <section id="register">
+
+        <h2>Kids Registration Form</h2>
+
+        <div class="form-container">
+
+            <form action="#" method="post">
+
+                <!-- Text Input -->
+                <div class="form-group">
+                    <label for="parent">Parent's Name:</label>
+                    <input type="text" id="parent" name="parent"
+                           placeholder="Enter parent's name" required>
+                </div>
+
+                <!-- Email Input -->
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email" required>
+                </div>
+
+                <!-- Telephone Input -->
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="Enter phone number"
+                           pattern="[0-9]{10}" required>
+                </div>
+
+                <!-- Number Input -->
+                <div class="form-group">
+                    <label for="age">Child's Age:</label>
+                    <input type="number" id="age" name="age"
+                           min="1" max="15" placeholder="Enter child's age" required>
+                </div>
+
+                <!-- Date Input -->
+                <div class="form-group">
+                    <label for="date">Date of Birth:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <!-- Select Tag -->
+                <div class="form-group">
+                    <label for="toy">Choose a Toy or Learning Kit:</label>
+                    <select id="toy" name="toy" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="building">Building Blocks</option>
+                        <option value="puzzle">Puzzle Games</option>
+                        <option value="science">Science Kit</option>
+                        <option value="art">Art and Craft Kit</option>
+                        <option value="robotics">Robotics Kit</option>
+                    </select>
+                </div>
+
+                <!-- Radio Input -->
+                <div class="form-group">
+                    <label>Preferred Learning Type:</label>
+
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="learning"
+                                   value="creative" required>
+                            Creative
+                        </label>
+
+                        <label>
+                            <input type="radio" name="learning"
+                                   value="educational">
+                            Educational
+                        </label>
+
+                        <label>
+                            <input type="radio" name="learning"
+                                   value="interactive">
+                            Interactive
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Checkbox Input -->
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="updates" value="yes"
+                               style="width:auto;">
+                        Receive updates about new toys and offers
+                    </label>
+                </div>
+
+                <!-- Textarea Tag -->
+                <div class="form-group">
+                    <label for="message">Additional Requirements:</label>
+                    <textarea id="message" name="message"
+                              placeholder="Tell us about your child's interests..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Registration</button>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- SUB-PRACTICUM 4: CSS STYLING SECTION -->
+    <section id="styling" class="style-section">
+
+        <h2>Discover Our Creative World!</h2>
+
+        <p class="style-description">
+            At ToyNest, we make learning colorful, creative and fun.
+            Explore our specially designed toys and learning kits!
+        </p>
+
+        <div class="style-container">
+
+            <div class="style-card">
+                <h3>🎨 Creative Toys</h3>
+                <p>
+                    Explore your imagination with our art
+                    and craft learning kits.
+                </p>
+                <span class="style-tag">Creativity</span>
+            </div>
+
+            <div class="style-card">
+                <h3>🧩 Puzzle Games</h3>
+                <p>
+                    Improve problem-solving skills with
+                    exciting puzzle games.
+                </p>
+                <span class="style-tag">Thinking</span>
+            </div>
+
+            <div class="style-card">
+                <h3>🚀 Science Kits</h3>
+                <p>
+                    Discover science through fun and
+                    interactive experiments.
+                </p>
+                <span class="style-tag">Learning</span>
+            </div>
+
+        </div>
+
+        <!-- INLINE CSS EXAMPLE -->
+        <p style="color: #e7837d; background-color: #fff0e8;
+                  padding: 15px; border: 2px dashed #e7837d;
+                  border-radius: 10px; text-align: center;
+                  margin-top: 25px;">
+            Welcome to ToyNest! Learning is always an adventure!
+        </p>
+
+    </section>
+
+    <footer>
+        <p>© 2026 ToyNest | Making Learning Fun!</p>
+    </footer>
+
+</body>
+</html>

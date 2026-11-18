@@ -1,0 +1,81 @@
+
+/* EXTERNAL CSS FOR TOYNEST */
+
+/* Styling the CSS section */
+.style-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+    background-color: #f0fffc;
+    border: 2px solid #79c9c5;
+    border-radius: 15px;
+}
+
+/* Description text */
+.style-description {
+    text-align: center;
+    color: #26354a;
+    background-color: #fff0e8;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Card layout */
+.style-container {
+    text-align: center;
+}
+
+/* Individual cards */
+.style-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    min-height: 190px;
+    margin: 1%;
+    padding: 20px;
+    background-color: white;
+    color: #26354a;
+    border: 2px solid #79c9c5;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* Card heading */
+.style-card h3 {
+    color: #e7837d;
+    margin-bottom: 15px;
+}
+
+/* Card paragraph */
+.style-card p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Hover effect */
+.style-card:hover {
+    background-color: #fff8ed;
+    border-color: #e7837d;
+    transform: translateY(-5px);
+}
+
+/* Inline-block tags */
+.style-tag {
+    display: inline-block;
+    background-color: #ffb84d;
+    color: #26354a;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Responsive layout */
+@media (max-width: 650px) {
+    .style-card {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
